@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  background-color: #1e1e1e;
+}
+
+body {
+  margin: 0 0 10vh;
+  font-family: "Alexandria", sans-serif;
+  color: white;
+}
+
+header {
+  border-bottom: 1px solid #333;
+  padding: 5%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  animation: fadeInDown 1s ease-in-out;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+main section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+#LoginForm {
+  background: #333;
+  color: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  box-sizing: border-box;
+  margin-top: 5%;
+}
+
+#LoginForm h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+#LoginForm input[type="text"],
+#LoginForm input[type="password"],
+#LoginForm input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #555;
+  background: #222;
+  color: #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#LoginForm input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+#LoginForm label {
+  font-size: 0.8em;
+  color: #ccc;
+}
+
+#LoginForm button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #0056b3;
+  color: #f8f8f8;
+  transition: background-color 0.2s ease;
+}
+
+#LoginForm button:active {
+  background-color: #004085;
+}
+
+.checkboxDiv {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.content {
+  margin-left: 2%;
+}
+
+.clear {
+  clear: both;
+}
+
+.checkBox {
+  display: block;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 2px #fff;
+}
+
+.checkBox div {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  top: -52px;
+  left: -52px;
+  position: absolute;
+  transform: rotateZ(45deg);
+  z-index: 100;
+}
+
+.checkBox input[type=checkbox]:checked + div {
+  left: -10px;
+  top: -10px;
+}
+
+.checkBox input[type=checkbox] {
+  position: absolute;
+  left: 50px;
+  visibility: hidden;
+}
+
+.transition {
+  transition: 300ms ease;
+}
+
+#errorParagraph {
+  color: white;
+  margin: 5%;
+  font-size: 18px;
+}
+
+#guildDropDown {
+  display: none;
+  background-color: white;
+  padding: 2%;
+}
+
+.member-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  margin: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: black;
+}
+
+.member-card div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.member-card div > * {
+  margin: 2%;
+}
+
+i {
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+i:hover {
+  background-color: #0056b3;
+}
+
+[contenteditable="true"] {
+  border: 1px solid #ccc;
+  padding: 2%;
+  border-radius: 1%;
+  background-color: #fff;
+}
+
+.dialog {
+  background-color: #fff;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2%;
+  width: 300px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.dialog > * {
+  margin: 3%;
+}
+
+.dialog input[type="text"],
+.dialog input[type="number"] {
+  width: 90%;
+  padding: 2%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.dialog button {
+  padding: 2% 4%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-open {
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#confirmBtn {
+  background-color: #28a745;
+  color: #f8f8f8;
+  width: 45%;
+  margin-left: 1%;
+}
+
+#cancelBtn {
+  background-color: #dc3545;
+  color: #f8f8f8;
+  width: 45%;
+  margin-right: 1%;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0m);
+  z-index: 999;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #333;
+  padding: 5%;
+  color: #ffffff;
+}
+
+footer p a {
+  color: #ffffff;
+}
+
+/* keyframes and media screens here 👇 */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  main {
+    display: block;
+  }
+
+  header, footer {
+    padding: 3%;
+  }
+}
